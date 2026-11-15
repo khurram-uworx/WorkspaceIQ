@@ -1,0 +1,43 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "microsoft-learn": {
+      "type": "remote",
+      "url": "https://learn.microsoft.com/api/mcp"
+    },
+    "code-memory": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@uworx/code-memory"
+      ]
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    }
+  },
+  "permissions": [
+    {
+      "action": "skill",
+      "resource": "iterative-work",
+      "effect": "deny"
+    }
+  ],
+  "agents": {
+    "build": {
+      "permissions": [
+        {
+          "action": "skill",
+          "resource": "iterative-work",
+          "effect": "allow"
+        }
+      ]
+    }
+  }
+}
